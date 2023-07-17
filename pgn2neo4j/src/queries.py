@@ -5,6 +5,9 @@ def update_fen_node(neo4j_driver, fen, result):
         # Check if the node already exists based on the FEN
         query = """
         MERGE (n:Position {fen: $fen})
+        ON CREATE SET n.blackWins = 0,
+                        n.whiteWins = 0,
+                        n.gamesPlayed = 0
         """
         session.run(query, fen=fen)
 
