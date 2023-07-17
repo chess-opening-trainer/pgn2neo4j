@@ -7,4 +7,3 @@ Each Position node has a fen property containing the FEN representation of the p
 * whiteWins: the number of games won by white from this position
 * blackWins: the number of games won by black from this position
 * gamesPlayed: the total number of games played from this position
-* lichessLink: a link to the position on lichess.org
